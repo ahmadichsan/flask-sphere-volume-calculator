@@ -9,15 +9,19 @@ def home():
 
 @app.route('/sphere-volume', methods = ['POST'])
 def greet():
-    # rad = request.args.get('radius', default=0, type=int)
     rad = request.form['radius']
-    print(rad)
-    print(type(rad))
-    print(request.get_data())
-    rad = int(rad)
 
-    if rad == 0:
-        return "Nope"
+    try:
+        rad = int(rad)
+    except:
+        try:
+            rad = float(rad)
+        except:
+            return render_template("result.html", rad=rad, error=True)
+        
+
+    if rad <= 0:
+        return render_template("result.html", rad=rad, error=True)
 
     pi = 3.1415926535
 

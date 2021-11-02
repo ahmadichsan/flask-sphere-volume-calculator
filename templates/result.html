@@ -38,12 +38,24 @@
 
         <div class="col-md-12 mt-5 d-flex align-items-center justify-content-center">
           <div class="mb-4">
+            {% if error %}
+            <div class="text-center">
+              <h3>
+                Oops, we detect something went wrong with your radius value, {{ rad }}
+              </h3>
+
+              <div class="mb-4">
+                This Sphere Volume Calculator was designed to work only with positive number. Arigatou!
+              </div>
+            </div>
+            {% else %}
             <h3>
               The sphere volume is {{ volume }} (m<sup>3</sup>), Great!!
             </h3>
 
             <div class="mb-4">
-              <img src="{{ url_for('static', filename='images/formula.png') }}" alt="Image" class="img-fluid img-formula">
+              <img src="{{ url_for('static', filename='images/formula.png') }}" alt="Image"
+                class="img-fluid img-formula">
             </div>
 
             <div class="mb-4">
@@ -60,6 +72,7 @@
                 </li>
               </ul>
             </div>
+            {% endif %}
           </div>
         </div>
 
@@ -70,16 +83,16 @@
 
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
   <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
-  
+
   <!-- <script src="js/popper.min.js"></script> -->
   <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
-  
+
   <!-- <script src="js/bootstrap.min.js"></script> -->
   <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-  
+
   <!-- <script src="js/main.js"></script> -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  
+
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 
