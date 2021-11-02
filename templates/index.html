@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  <!-- Style -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Sphere Volume Calculator</title>
+</head>
+
+<body>
+
+  <div class="content p-5">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-6 order-md-2">
+          <!-- <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid"> -->
+          <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_zbjjqpld.json" background="transparent"
+            speed="1" loop autoplay>
+          </lottie-player>
+        </div>
+
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+                <h3>
+                  Welcome to Sphere Volume Calculator
+                </h3>
+
+                <p class="mb-4">
+                  This app could help you to calculate a sphere volume by providing us the radius of the sphere
+                </p>
+              </div>
+
+              <form action="/sphere-volume" method="post">
+                <div class="form-group first">
+                  <label for="radius">Sphere Radius (m)</label>
+                  <input type="number" class="form-control" id="radius" name="radius" placeholder="...">
+                </div>
+
+                <input type="submit" value="Get the sphere volume!" class="btn text-white btn-block button-bg">
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+
+  <!-- <script src="js/popper.min.js"></script> -->
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+  <!-- <script src="js/main.js"></script> -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
