@@ -1,8 +1,9 @@
-# flask-sphere-volume-calculator
+# Flask Sphere Volume Calculator
 This is a python flask web app to calculate the volume of a sphere based on a radius provided by unser input
 
 ## Author
 name: Ahmad Ichsan Baihaqi
+
 email: ahmadichsanbaihaqi@gmail.com
 
 ## Live Demo
