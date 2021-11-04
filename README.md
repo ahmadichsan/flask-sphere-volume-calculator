@@ -14,4 +14,5 @@ To get this app run on your local machine, do following steps:
 2. open the code on your favorite IDE
 3. open command prompt/terminal and get into the project root folder
 4. run ```export FLASK_APP=index```
+6. run ```flask run``` in the terminal to start the app
 5. open the app in http://127.0.0.1:5000/
